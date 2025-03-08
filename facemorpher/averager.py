@@ -105,6 +105,7 @@ def averager(imgpaths, dest_filename=None, width=500, height=600, background='bl
 
   print('Averaged {} images'.format(num_images))
   plt = plotter.Plotter(plot, num_images=1, out_filename=out_filename)
+  dest_img = dest_img.astype(np.uint8)
   plt.save(dest_img)
   plt.plot_one(dest_img)
   plt.show()
